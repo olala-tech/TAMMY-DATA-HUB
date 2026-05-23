@@ -1,0 +1,250 @@
+/* ==========================================================================
+   1. Base & Global Reset Styles
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0B0C10; /* Soft premium off-black */
+    color: #FFFFFF; /* High contrast crisp white text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. Navigation Bar
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212; /* Distinct dark layer */
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #006600; /* Subtle Safaricom Green underline */
+}
+
+.nav-logo {
+    color: #006600;
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #EE3540; /* Switches to red on hover */
+}
+
+/* ==========================================================================
+   3. Hero Section & Profile Photo
+   ========================================================================== */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+    background: linear-gradient(to bottom, #121212, #0B0C10);
+}
+
+.profile-wrapper {
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* Perfect circular frame */
+    border: 4px solid #006600; /* Distinct corporate green boundary border */
+    object-fit: cover;
+    background-color: #1F2833; /* Backup color while image loads */
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    color: #006600;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.brand-subtext {
+    color: #EE3540; /* Clear brand red accent line */
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   4. Layout Layout and Container
+   ========================================================================== */
+.content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    text-align: center;
+    color: #006600;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* About Box Design */
+.about-card {
+    background-color: #1F2833; /* Charcoal slate tile */
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.about-card p {
+    font-size: 1.1rem;
+    color: #E0E0E0; /* Soft white for long paragraph blocks */
+}
+
+/* ==========================================================================
+   5. Responsive Pricing Package Grid
+   ========================================================================== */
+.section-desc {
+    text-align: center;
+    color: #A9A9A9;
+    margin-bottom: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.price-card {
+    background-color: #1F2833;
+    border: 2px solid #2d3748;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+    border-color: #006600; /* Border lights up green on hover */
+}
+
+/* Highlighted container style */
+.price-card.featured {
+    border-color: #EE3540; /* Red border focus for best seller */
+    transform: scale(1.02);
+}
+.price-card.featured:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Cards Badges */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #4A5568;
+    color: #FFF;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.badge.popular {
+    background-color: #EE3540; /* Red badge marker */
+}
+
+.price-card h3 {
+    font-size: 2rem;
+    margin: 15px 0 5px 0;
+    color: #FFF;
+}
+
+.validity {
+    color: #A9A9A9;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.price-tag {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #006600; /* Bold Green prices */
+    margin-bottom: 25px;
+}
+
+/* Purchase Actions Elements */
+.buy-button {
+    display: block;
+    background-color: #006600;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.buy-button:hover {
+    background-color: #004d00;
+}
+
+.price-card.featured .buy-button {
+    background-color: #EE3540; /* Red button match for highlighted element */
+}
+.price-card.featured .buy-button:hover {
+    background-color: #b31c24;
+}
+
+/* ==========================================================================
+   6. Footer Settings
+   ========================================================================== */
+.site-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #121212;
+    border-top: 1px solid #222;
+    margin-top: 60px;
+    color: #777;
+    font-size: 0.9rem;
+}
